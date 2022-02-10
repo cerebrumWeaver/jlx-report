@@ -1,8 +1,10 @@
 <template>
-    <div class="demo-image__preview">
-        <div v-for="url in urls" :key="url">
+    <div class="demo-image__preview" >
+        <div v-for="url in urls" :key="url" >
+          <span style="float: left;">
             <el-image  :src="url" lazy :preview-src-list="srcList" style="width: 100px; height: 100px">
             </el-image>
+          </span>
         </div>
         <div>
             <el-image-viewer v-if="showViewer" :initial-index="1" :on-close="onClose" :on-switch="onSwitch" :url-list="srcList"/>
@@ -25,7 +27,7 @@
         require('../../assets/png/2.2.5.1.png'),
         require('../../assets/png/2.2.5.2.png'),
         require('../../assets/png/2.2.5.3.png'),
-
+        require('../../assets/png/2.2.5.4.png'),
       ])
       const onClose = () =>{
         this.showViewer = false
